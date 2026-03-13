@@ -32,6 +32,44 @@ The purpose of Rashtrapath is to:
 
 ---
 
+## Writing Blogs in Markdown
+
+You can now publish blogs by creating Markdown files inside `blog/`.
+
+### 1) Create a new file
+
+Example:
+
+`blog/my-first-post.md`
+
+### 2) Add frontmatter at the top
+
+```md
+---
+title: "My First Post"
+author: "Your Name"
+date: "2026-03-13"
+category: "Opinion"
+description: "Short summary shown in blog cards."
+coverImage: "https://images.unsplash.com/..."
+---
+```
+
+### 3) Write normal Markdown content
+
+- Use headings, lists, links, and quotes.
+- Add as many images as needed using Markdown image syntax:
+
+```md
+![Alt text](https://example.com/image.jpg)
+```
+
+Each file automatically appears in the blog listing, and is available at:
+
+`/blog/<file-name-without-md>`
+
+---
+
 ## Design System
 
 **Visual Tone:**  
