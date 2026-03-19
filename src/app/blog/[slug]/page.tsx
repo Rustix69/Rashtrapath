@@ -68,6 +68,7 @@ export default async function BlogPostPage({ params }: BlogPageParams) {
             <img
               src={post.coverImage}
               alt={post.title}
+              loading="lazy"
               className="mt-6 w-full rounded-2xl border border-[#efc59a] object-cover shadow-[0_12px_28px_rgba(196,116,45,0.16)]"
             />
           ) : null}

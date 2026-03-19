@@ -9,7 +9,7 @@ export default function HeroSection() {
             src="/hero-section/mobile.jpg"
             alt="Rashtra Voice civic journalism hero mobile"
             fill
-            priority
+            loading="lazy"
             className="hero-bg-zoom object-cover object-center"
           />
         </div>
@@ -18,7 +18,7 @@ export default function HeroSection() {
             src="/hero-section/website.png"
             alt="Rashtra Voice civic journalism hero"
             fill
-            priority
+            loading="lazy"
             className="hero-bg-zoom object-cover object-center"
           />
         </div>

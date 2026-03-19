@@ -62,6 +62,7 @@ export default function GallerySection() {
                 src={item.src}
                 alt={item.alt}
                 fill
+                loading="lazy"
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/35 via-black/10 to-transparent opacity-80" />
