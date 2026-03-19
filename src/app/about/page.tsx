@@ -34,9 +34,9 @@ export default function AboutPage() {
         <article className="rounded-2xl border border-[#efc59a] bg-white/84 p-6 shadow-[0_16px_45px_rgba(196,116,45,0.18)] backdrop-blur-sm md:p-10">
           <div className="space-y-7 text-[1.04rem] leading-8 text-[#463021] md:text-[1.12rem]">
             <p>
-              The <strong className="text-[#ed8b37]">Nationalist Students' Front (NSF)</strong> is a fiercely
+              The <strong className="text-[#ed8b37]">Nationalist Students&apos; Front (NSF)</strong> is a fiercely
               independent, student-led organization at Jadavpur University, driven by the unwavering principle of
-              <em className="font-semibold text-[#f6b56f]"> "Nation First."</em> Born out of the necessity to give a
+              <em className="font-semibold text-[#f6b56f]"> &ldquo;Nation First.&rdquo;</em> Born out of the necessity to give a
               voice to the silent majority, NSF stands as a formidable shield against the radical, disruptive political
               hegemony that has long plagued our campus. We are committed to fostering a secure, progressive academic
               environment rooted in civilizational pride, intellectual freedom, and true democratic values. Our primary
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <strong className="text-[#f6b56f]"> cultural dignity</strong>, and the
               <strong className="text-[#0c8599]"> absolute Rule of Law</strong>. NSF actively opposes ideological
               coercion, the weaponization of campus grievance cells, and the institutionalized ragging networks run by
-              unrecognized <em>"phantom unions."</em> Whether it is protecting the democratic rights of first-year
+              unrecognized <em>&ldquo;phantom unions.&rdquo;</em> Whether it is protecting the democratic rights of first-year
               students, standing up against the mockery of our Dharmic and Bengali heritage, or demanding a
               violence-free, strike-free academic ecosystem, NSF is the unapologetic voice of student welfare and equal
               justice. We believe in protecting the innocent as fiercely as we demand punishment for the guilty.
