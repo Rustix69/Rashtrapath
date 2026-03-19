@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -35,14 +36,16 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:items-start md:justify-start">
-            <a
-              href="#"
+            <Link
+              href="/blog"
               className="inline-flex min-w-44 items-center justify-center rounded-xl bg-[#E76F00] px-6 py-3 text-base font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-[#cf5f00]"
             >
               Read Articles
-            </a>
+            </Link>
             <a
-              href="#"
+              href="https://forms.gle/ZB5vEZBHe8D9GwQb6"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-w-44 items-center justify-center rounded-xl bg-[#006D77] px-6 py-3 text-base font-semibold text-white transition-colors duration-300 ease-in-out hover:bg-[#00565e]"
             >
               Join Movement

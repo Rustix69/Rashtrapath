@@ -29,7 +29,7 @@ export default function Footer() {
             <span className="font-medium text-[#2f2218]">Voice</span>
           </div>
           <p className="font-poppins mt-4 max-w-md text-[0.98rem] leading-7 text-[#5a3f2b]">
-            National Student Front, Jadavpur University, Kolkata
+            Nationalist Students Front, Jadavpur University, Kolkata
           </p>
 
           <div className="mt-5 flex items-center gap-4">
