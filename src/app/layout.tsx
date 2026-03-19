@@ -13,7 +13,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const metadataBaseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://rashtravoice.in");
+
+const defaultPreviewImage = "/logo.png";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(metadataBaseUrl),
   title: "RashtraVoice — Voice of the Nation",
   description:
     "RashtraVoice is a civic journalism platform focused on truth, accountability, and public awareness.",
@@ -33,6 +40,22 @@ export const metadata: Metadata = {
     description:
       "A platform amplifying citizen voices and promoting accountability.",
     type: "website",
+    url: "/",
+    siteName: "RashtraVoice",
+    images: [
+      {
+        url: defaultPreviewImage,
+        alt: "RashtraVoice",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "RashtraVoice — Voice of the Nation",
+    description:
+      "A platform amplifying citizen voices and promoting accountability.",
+    images: [defaultPreviewImage],
   },
 
   icons: {

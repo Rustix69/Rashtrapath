@@ -3,6 +3,18 @@ import { notFound } from "next/navigation";
 import MarkdownContent from "@/components/MarkdownContent";
 import { getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
+function toAbsoluteUrl(pathOrUrl: string) {
+  if (pathOrUrl.startsWith("http://") || pathOrUrl.startsWith("https://")) {
+    return pathOrUrl;
+  }
+
+  return `${siteUrl}${pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`}`;
+}
+
 type BlogPageParams = {
   params: Promise<{
     slug: string;
@@ -24,10 +36,36 @@ export async function generateMetadata({ params }: BlogPageParams): Promise<Meta
     };
   }
 
+  const postUrl = `${siteUrl}/blog/${slug}`;
+  const coverImage = post.coverImage ? toAbsoluteUrl(post.coverImage) : `${siteUrl}/hero-section/website.png`;
+  const title = `${post.title} | Rashtrapath`;
+
   return {
-    title: `${post.title} | Rashtrapath`,
+    title,
     description: post.description,
     authors: [{ name: post.author }],
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title,
+      description: post.description,
+      type: "article",
+      url: postUrl,
+      siteName: "RashtraVoice",
+      images: [
+        {
+          url: coverImage,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: post.description,
+      images: [coverImage],
+    },
   };
 }
 
