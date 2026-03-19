@@ -1,24 +1,38 @@
-'use client';
-import Image from "next/image";
+import Link from "next/link";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-30 w-[92%] md:w-[86%] lg:w-[80%]">
-      <nav className="h-14 px-4 md:px-6 lg:px-8 flex items-center justify-between rounded-xl border border-white/30 bg-white/10 backdrop-blur-md text-white shadow-[0_4px_24px_rgba(0,0,0,0.25)]">
-        <div className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Rashtrapath logo" width={36} height={36} className="rounded-sm object-cover" />
-          <div className="text-lg font-semibold tracking-wide">RashtraPath</div>
+    <header className="absolute inset-x-0 top-0 z-30">
+      <nav className="flex h-24 w-full items-center justify-between px-3 sm:px-4 md:px-6">
+        <div className="font-poppins text-[2.2rem] leading-none tracking-tight">
+          <span className="font-bold text-[#ed8b37]">Rashtra</span>
+          <span className="font-medium text-white">Voice</span>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-white/90">
-          <span className="hover:text-white transition-colors">Home</span>
-          <span className="hover:text-white transition-colors">Blog</span>
-          <span className="hover:text-white transition-colors">Contact</span>
+
+        <div className="hidden items-center gap-8 font-poppins text-base text-white md:flex lg:gap-10">
+          <Link href="/" className="transition-colors duration-300 ease-in-out hover:text-[#E76F00]">
+            Home
+          </Link>
+          <Link href="/blog" className="transition-colors duration-300 ease-in-out hover:text-[#E76F00]">
+            Blogs
+          </Link>
+          <Link href="/about" className="transition-colors duration-300 ease-in-out hover:text-[#E76F00]">
+            About Us
+          </Link>
         </div>
-        <div className="hidden md:block">
-          <button className="px-4 md:px-5 py-1.5 md:py-2 border border-white/70 rounded-md text-white/90 hover:text-black hover:bg-white transition-colors">Subscribe</button>
+
+        <div className="md:hidden">
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md text-white transition-colors duration-300 ease-in-out hover:text-[#E76F00]"
+            aria-label="Open menu"
+          >
+            <Menu size={28} strokeWidth={2.1} />
+          </button>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }
 

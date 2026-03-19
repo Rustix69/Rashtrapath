@@ -40,16 +40,22 @@ export default async function BlogPostPage({ params }: BlogPageParams) {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFF9F3] px-6 py-16 text-neutral-900 md:px-8">
+    <main className="font-poppins min-h-screen bg-linear-to-b from-[#fff9f3] via-[#fff1e2] to-[#ffe2c6] px-4 py-14 text-[#2f2218] sm:px-6 md:px-8 md:py-16">
       <article className="mx-auto w-full max-w-4xl">
         <header className="mb-10 space-y-5">
-          <p className="inline-block rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-800">
-            {post.category}
-          </p>
+          <h1 className="font-inter text-4xl font-extrabold leading-tight tracking-tight text-[#2f2218] md:text-5xl">
+            {post.title}
+          </h1>
 
-          <h1 className="text-4xl font-bold leading-tight md:text-5xl">{post.title}</h1>
-
-          <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-600">
+          <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-[#6a4b35]">
+            {post.authorImage ? (
+              <img
+                src={post.authorImage}
+                alt={post.author}
+                className="h-8 w-8 rounded-full border border-[#efc59a] object-cover"
+                loading="lazy"
+              />
+            ) : null}
             <span>{post.author}</span>
             <span>•</span>
             <span>{post.date}</span>
@@ -62,7 +68,7 @@ export default async function BlogPostPage({ params }: BlogPageParams) {
             <img
               src={post.coverImage}
               alt={post.title}
-              className="mt-6 w-full rounded-2xl border border-neutral-200 object-cover shadow-sm"
+              className="mt-6 w-full rounded-2xl border border-[#efc59a] object-cover shadow-[0_12px_28px_rgba(196,116,45,0.16)]"
             />
           ) : null}
         </header>

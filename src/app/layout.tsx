@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,16 +14,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rashtrapath - Voice of the People | Civic Journalism Platform",
-  description: "Rashtrapath is a digital civic journalism platform empowering citizens, uncovering truths, and challenging corruption. A voice for the people—standing against injustice, promoting transparency, and upholding democracy.",
-  keywords: ["civic journalism", "democracy", "transparency", "accountability", "social justice", "governance", "reform"],
-  authors: [{ name: "Rashtrapath" }],
+  title: "RashtraVoice — Voice of the Nation",
+  description:
+    "RashtraVoice is a civic journalism platform focused on truth, accountability, and public awareness.",
+
+  keywords: [
+    "civic journalism",
+    "india news",
+    "governance",
+    "transparency",
+    "public voice"
+  ],
+
+  authors: [{ name: "RashtraVoice" }],
+
   openGraph: {
-    title: "Rashtrapath - Voice of the People",
-    description: "A digital civic journalism platform empowering citizens and promoting accountability.",
+    title: "RashtraVoice — Voice of the Nation",
+    description:
+      "A platform amplifying citizen voices and promoting accountability.",
     type: "website",
   },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -38,6 +55,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

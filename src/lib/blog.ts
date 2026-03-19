@@ -7,6 +7,8 @@ const BLOG_DIRECTORY = path.join(process.cwd(), "blog");
 type BlogFrontmatter = {
   title?: string;
   author?: string;
+  authorimg?: string;
+  authorImage?: string;
   description?: string;
   category?: string;
   date?: string;
@@ -17,6 +19,7 @@ export type BlogPostMeta = {
   slug: string;
   title: string;
   author: string;
+  authorImage: string;
   description: string;
   category: string;
   date: string;
@@ -80,6 +83,7 @@ function resolvePostMeta(
 ): BlogPostMeta {
   const title = frontmatter.title?.trim() || toTitleFromSlug(slug);
   const author = frontmatter.author?.trim() || "Rashtrapath Editorial";
+  const authorImage = frontmatter.authorimg?.trim() || frontmatter.authorImage?.trim() || "";
   const date = frontmatter.date?.trim() || "No date";
   const category = frontmatter.category?.trim() || "General";
   const description = createDescription(frontmatter.description, content);
@@ -90,6 +94,7 @@ function resolvePostMeta(
     slug,
     title,
     author,
+    authorImage,
     date,
     category,
     description,
@@ -131,6 +136,7 @@ export async function getAllBlogPosts() {
     slug: post.slug,
     title: post.title,
     author: post.author,
+    authorImage: post.authorImage,
     date: post.date,
     category: post.category,
     description: post.description,
