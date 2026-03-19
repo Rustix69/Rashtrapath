@@ -82,7 +82,7 @@ function resolvePostMeta(
   content: string
 ): BlogPostMeta {
   const title = frontmatter.title?.trim() || toTitleFromSlug(slug);
-  const author = frontmatter.author?.trim() || "Rashtrapath Editorial";
+  const author = frontmatter.author?.trim() || "RashtraVoice Editorial";
   const authorImage = frontmatter.authorimg?.trim() || frontmatter.authorImage?.trim() || "";
   const date = frontmatter.date?.trim() || "No date";
   const category = frontmatter.category?.trim() || "General";

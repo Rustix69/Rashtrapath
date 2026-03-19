@@ -5,7 +5,7 @@ date: "20-03-2026"
 category: "Truth"
 description: 'Savarkar was not a traitor. Rather he was the politician most feared  by Britishers. But "distortians" will never accept that.'
 authorimg: "/author/sabyasachi.png"
-coverImage: "/blogs/blog01.png"
+coverImage: "/blogs/blog01.jpeg"
 ---
 History is nearly neutral; it is always the battlefield where
 the loudest voices often bury their most uncomfortable truths. For decades, a

@@ -17,7 +17,7 @@ const metadataBaseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://rashtravoice.in");
 
-const defaultPreviewImage = "/logo.png";
+const defaultPreviewImage = "/logo.jpeg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metadataBaseUrl),

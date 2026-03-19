@@ -32,13 +32,13 @@ export async function generateMetadata({ params }: BlogPageParams): Promise<Meta
 
   if (!post) {
     return {
-      title: "Blog Not Found | Rashtrapath",
+      title: "Blog Not Founds",
     };
   }
 
   const postUrl = `${siteUrl}/blog/${slug}`;
   const coverImage = post.coverImage ? toAbsoluteUrl(post.coverImage) : `${siteUrl}/hero-section/website.png`;
-  const title = `${post.title} | Rashtrapath`;
+  const title = `${post.title}`;
 
   return {
     title,
