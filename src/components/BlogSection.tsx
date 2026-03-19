@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { getAllBlogPosts } from "@/lib/blog";
 
@@ -8,8 +9,17 @@ export default async function BlogSection() {
   return (
     <section className="bg-linear-to-b from-[#fff7ee] via-[#fff3e5] to-[#ffe7cd] px-4 py-16 sm:px-6 md:px-8 md:py-20">
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-12 text-center md:mb-16">
-          <h2 className="font-inter mb-4 text-4xl font-extrabold tracking-tight text-[#2f2218] md:text-5xl lg:text-6xl">
+        <div className="mb-5 text-center md:mb-8">
+          <div className="mb-6 flex justify-center md:justify-start">
+            <Link
+              href="/"
+              className="font-poppins inline-flex items-center justify-center gap-2 rounded-lg border border-[#e7b585] bg-white/90 px-4 py-2 text-sm font-semibold text-[#6a4528] transition-colors duration-300 ease-in-out hover:bg-[#fff3e3] hover:text-[#a05515]"
+            >
+              <ArrowLeft size={16} strokeWidth={2.2} />
+              Back to Home
+            </Link>
+          </div>
+          <h2 className="font-inter mb-2 text-4xl font-extrabold tracking-tight text-[#2f2218] md:text-5xl lg:text-6xl">
             Voices of the Nation
           </h2>
           <p className="font-poppins text-base text-[#5a3f2b] md:text-lg">

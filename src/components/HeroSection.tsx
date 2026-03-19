@@ -27,7 +27,7 @@ export default function HeroSection() {
 
       <div className="relative z-20 flex h-full w-full items-center justify-center px-4 pb-10 pt-24 sm:px-6 md:justify-start md:px-8 lg:px-10">
         <div className="font-poppins w-full max-w-[760px] text-center md:-translate-y-7 md:text-left">
-          <h1 className="font-inter text-[clamp(2.75rem,7.6vw,4.35rem)] font-extrabold leading-[1.03] tracking-tight text-white md:text-[clamp(3rem,7.9vw,4.85rem)] md:whitespace-nowrap">
+          <h1 className="font-inter text-[clamp(3.05rem,8.2vw,4.8rem)] font-extrabold leading-[1.03] tracking-tight text-white md:text-[clamp(3.45rem,8.4vw,5.35rem)] md:whitespace-nowrap">
             Voice of the Nation
           </h1>
           <p className="mt-4 text-[clamp(1.42rem,2.45vw,1.72rem)] font-medium text-[rgba(255,255,255,0.85)]">
