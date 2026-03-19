@@ -41,7 +41,7 @@ export default async function BlogSection({ showBackButton = false }: BlogSectio
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-10 lg:gap-x-12 gap-y-4 md:gap-y-4 -mt-10 sm: mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-10 lg:gap-x-12 gap-y-4 md:gap-y-4 -mt-10 sm:mt-0">
             {blogPosts.map((post) => (
               <CardContainer key={post.slug} className="font-poppins inter-var">
                 <Link href={`/blog/${post.slug}`} className="block">
