@@ -70,7 +70,9 @@ of Rs 100 during his imprisonment. Later during Quit India Movement, while
 Savarkar’s followers were being suppressed, Gandhi was detained in the palatial
 Aga Khan Palace. During 1943-1944, Gandhi received an allowance of ₹450 per
 month and during 1944-1945, this was increased to ₹550 per month.
+
 > **Source:** Home Department (Political), Government of India, File No. 138/1930 & File No. 3/19/44-Pol (I)
+
 After being unconditionally released from restrictions to the
 Ratnagiri district in 1937, he was still closely monitored by the British
 Intelligence (IB) and local police 24/7 due to his leadership of the Hindu
