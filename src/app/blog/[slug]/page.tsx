@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import MarkdownContent from "@/components/MarkdownContent";
 import { getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog";
@@ -81,6 +82,13 @@ export default async function BlogPostPage({ params }: BlogPageParams) {
     <main className="font-poppins min-h-screen bg-linear-to-b from-[#fff9f3] via-[#fff1e2] to-[#ffe2c6] px-4 py-14 text-[#2f2218] sm:px-6 md:px-8 md:py-16">
       <article className="mx-auto w-full max-w-4xl">
         <header className="mb-10 space-y-5">
+          <Link
+            href="/blog"
+            className="inline-flex items-center rounded-lg border border-[#e7b585] bg-white/85 px-4 py-2 text-sm font-semibold text-[#6a4528] transition-colors duration-300 ease-in-out hover:bg-[#fff3e3] hover:text-[#a05515]"
+          >
+            &lt; Back to Blogs
+          </Link>
+
           <h1 className="font-inter text-4xl font-extrabold leading-tight tracking-tight text-[#2f2218] md:text-5xl">
             {post.title}
           </h1>
