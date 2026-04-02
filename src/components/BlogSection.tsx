@@ -41,60 +41,59 @@ export default async function BlogSection({ showBackButton = false }: BlogSectio
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-10 lg:gap-x-12 gap-y-4 md:gap-y-4 -mt-10 sm:mt-0">
-            {blogPosts.map((post) => (
-              <CardContainer key={post.slug} className="font-poppins inter-var">
-                <Link href={`/blog/${post.slug}`} className="block">
-                  <CardBody className="relative h-auto w-full overflow-hidden rounded-2xl border border-[#efc59a] bg-white/92 shadow-[0_10px_28px_rgba(196,116,45,0.16)]">
-                    <CardItem translateZ="100" className="w-full relative">
-                      <img
-                        src={post.coverImage}
-                        className="h-56 w-full object-cover"
-                        alt={post.title}
-                        loading="lazy"
-                      />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-10 lg:gap-x-12 gap-y-4 md:gap-y-5 mt-4 sm:mt-0">            {blogPosts.map((post) => (
+            <CardContainer key={post.slug} className="font-poppins inter-var">
+              <Link href={`/blog/${post.slug}`} className="block">
+                <CardBody className="relative h-auto w-full overflow-hidden rounded-2xl border border-[#efc59a] bg-white/92 shadow-[0_10px_28px_rgba(196,116,45,0.16)]">
+                  <CardItem translateZ="100" className="w-full relative">
+                    <img
+                      src={post.coverImage}
+                      className="h-56 w-full object-cover"
+                      alt={post.title}
+                      loading="lazy"
+                    />
+                  </CardItem>
+
+                  <div className="p-6">
+                    <CardItem translateZ="50" className="mb-3 flex items-center gap-2 text-xs font-medium text-[#7b5a42]">
+                      <span>{post.date}</span>
+                      <span>•</span>
+                      <span>{post.readTime}</span>
                     </CardItem>
 
-                    <div className="p-6">
-                      <CardItem translateZ="50" className="mb-3 flex items-center gap-2 text-xs font-medium text-[#7b5a42]">
-                        <span>{post.date}</span>
-                        <span>•</span>
-                        <span>{post.readTime}</span>
-                      </CardItem>
+                    <CardItem
+                      translateZ="60"
+                      className="font-inter mb-2 line-clamp-2 text-xl font-bold text-[#2f2218]"
+                    >
+                      {post.title}
+                    </CardItem>
 
-                      <CardItem
-                        translateZ="60"
-                        className="font-inter mb-2 line-clamp-2 text-xl font-bold text-[#2f2218]"
-                      >
-                        {post.title}
-                      </CardItem>
+                    <CardItem
+                      as="p"
+                      translateZ="50"
+                      className="mb-4 line-clamp-3 text-sm leading-relaxed text-[#5a3f2b]"
+                    >
+                      {post.description}
+                    </CardItem>
 
-                      <CardItem
-                        as="p"
-                        translateZ="50"
-                        className="mb-4 line-clamp-3 text-sm leading-relaxed text-[#5a3f2b]"
-                      >
-                        {post.description}
-                      </CardItem>
-
-                      <CardItem translateZ="40" className="flex items-center gap-2 border-t border-[#efc59a] pt-4">
-                        {post.authorImage ? (
-                          <img
-                            src={post.authorImage}
-                            alt={post.author}
-                            className="h-8 w-8 rounded-full border border-[#efc59a] object-cover"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div className="h-8 w-8 rounded-full bg-linear-to-br from-[#ed8b37] to-[#f6b56f]" />
-                        )}
-                        <span className="text-sm font-semibold text-[#4f3525]">{post.author}</span>
-                      </CardItem>
-                    </div>
-                  </CardBody>
-                </Link>
-              </CardContainer>
-            ))}
+                    <CardItem translateZ="40" className="flex items-center gap-2 border-t border-[#efc59a] pt-4">
+                      {post.authorImage ? (
+                        <img
+                          src={post.authorImage}
+                          alt={post.author}
+                          className="h-8 w-8 rounded-full border border-[#efc59a] object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="h-8 w-8 rounded-full bg-linear-to-br from-[#ed8b37] to-[#f6b56f]" />
+                      )}
+                      <span className="text-sm font-semibold text-[#4f3525]">{post.author}</span>
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </Link>
+            </CardContainer>
+          ))}
           </div>
         )}
       </div>
